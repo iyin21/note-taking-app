@@ -18,7 +18,7 @@ interface Props {
 const ConfirmDelete = ({ openModal, setOpenModal, id, clear, setClear }: Props) => {
     const [isDeleting, setIsDeleting] = useState(false)
     const dispatch = useAppDispatch()
-    console.log(clear,"fgf");
+
     const handleDelete = () => {
         setIsDeleting(true)
 
@@ -52,7 +52,7 @@ const ConfirmDelete = ({ openModal, setOpenModal, id, clear, setClear }: Props) 
                     <div className="flex justify-center">
                         <img src={RedTrash} alt="" />
                     </div>
-                    <h5 className="font-bold mt-4">Confirm Delete</h5>
+                    <h5 className="font-bold mt-4 text-[22px]">Confirm Delete</h5>
                     <p className="mt-2 body-medium">
                         This action cannot be undone.
                     </p>
@@ -73,7 +73,7 @@ const ConfirmDelete = ({ openModal, setOpenModal, id, clear, setClear }: Props) 
                             {isDeleting ? "Deleting..." : `Delete`}
                         </Button>
                     </div>
-                    {/* </div> */}
+                    
                 </div>
             </Modal>
         </>

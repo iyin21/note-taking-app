@@ -20,7 +20,7 @@ const Navbar = ({
                     <input
                         type="text"
                         placeholder="Search"
-                        className="bg-transparent pl-2 outline-none"
+                        className="bg-transparent pl-2 outline-none font-semibold"
                     />
                 </div>
 

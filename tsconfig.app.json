@@ -30,7 +30,7 @@
         "@/types/*": ["types/*"],
         "@utils/*": ["utils/*"],
         "@redux/*": ["redux/*"],
-        "@services/*": ["services/*"]
+        "@context/*": ["context/*"]
     }
   },
   "include": ["src"]

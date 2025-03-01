@@ -18,9 +18,9 @@ const MyNotesSection = () => {
     const [query, setQuery] = useState("")
     const [searchParam] = useState(["title", "note"])
     const notes = useAppSelector((state) => state.note.notes)
-
+//console.log(notes, "ksff")
     const [sort, setSort] = useState("")
-    console.log(notes)
+
 
     const filteredData = useMemo(() => {
         return notes.filter((item: NoteProp) => {
@@ -68,12 +68,12 @@ const MyNotesSection = () => {
                 <h4 className="text-gray-100 font-bold text-[24px] leading-[28.18px]">
                     My Notes
                 </h4>
-                <div className="hidden md:flex bg-[#F4F4F4] text-[#868686] items-center rounded-[5px] px-4 py-4">
+                <div className="hidden md:flex bg-[#F4F4F4]  items-center rounded-[5px] px-4 py-4">
                     <FiSearch size="22px" color="#868686" />
                     <input
                         type="text"
                         placeholder="Search"
-                        className="bg-transparent pl-2 outline-none"
+                        className="bg-transparent pl-2 outline-none text-black-100 font-semibold"
                         onChange={(e) => setQuery(e.currentTarget.value)}
                         value={query}
                     />
@@ -127,18 +127,18 @@ const MyNotesSection = () => {
                     Clear Notes
                 </Button>
             </div>
-            <div className="flex items-center justify-between mt-3 ">
-                <div className="hid flex bg-[#F4F4F4] text-[#868686] items-center rounded mt-2 px-4 py-4">
+            <div className="md:hidden flex items-center justify-between mt-3 ">
+                <div className="hid flex bg-[#F4F4F4]  items-center rounded mt-2 px-4 py-4">
                     <FiSearch size="22px" color="#868686" />
                     <input
                         type="text"
                         placeholder="Search"
-                        className="bg-transparent pl-2 outline-none"
+                        className="bg-transparent pl-2 outline-none text-black-100 font-semibold"
                         onChange={(e) => setQuery(e.currentTarget.value)}
                         value={query}
                     />
                 </div>
-                <div className="md:hidden block">
+                <div className="">
                     <Popover
                         width={200}
                         position="bottom"
@@ -164,13 +164,14 @@ const MyNotesSection = () => {
                                 onChange={(e) => setSort(e.currentTarget.value)}
                             >
                                 <option value="a-z">A-Z</option>
+                                <option value="z-a">Z-A</option>
                                 <option value="newlyCreated">
                                     Newly created
                                 </option>
                                 <option value="newlyUpdated">
                                     Newly updated
                                 </option>
-                                <option value="z-a">Z-A</option>
+                                
                             </select>
                         </Popover.Dropdown>
                     </Popover>
@@ -181,6 +182,7 @@ const MyNotesSection = () => {
                     <p
                         onClick={() => setActiveTab(index)}
                         className={`${activeTab === index ? "text-black-100" : "text-[#5F5F5F]"} font-semibold text-[16px] leading-[18.78px] cursor-pointer hover:text-black-100`}
+                        key={index}
                     >
                         {item?.split(" ")[0]}{" "}
                         {item.split(" ")[1] && (

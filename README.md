@@ -5,44 +5,51 @@ This project is a simple Notes App built using React, TypeScript, and Vite. It a
 
 ## Getting Started
 1. Clone the Repository
-```git clone https://github.com/iyin21/notes-app.git```
-```cd notes-app```
+
+```shell
+git clone https://github.com/iyin21/notes-app.git
+cd notes-app
+```
 
 2. Install Dependencies
 Make sure you have Node.js (v18+) installed. 
 
-```yarn install```
+```shell
+  yarn install
+```
 
 3. Run the App Locally
 To start the development server, run:
 
-```yarn dev```
+```shell
+yarn dev
+```
 The app will be available at http://localhost:5173/.
 
-##Approach & Features
+## Approach & Features
 
-###Tech Stack
+### Tech Stack
 
--Frontend: React + TypeScript + Vite
--State Management: React Hooks (useState, useEffect) 
--Styling: Tailwind CSS + Mantine UI
--Icons: React Icons
+- Frontend: React + TypeScript + Vite
+- State Management: Redux Toolkit (@reduxjs/toolkit)
+- Styling: Tailwind CSS + Mantine UI
+- Icons: React Icons
 
-###Core Features
+### Core Features
 
--Create, edit, delete notes
--Global state management using Redux Toolkit
--Local storage persistence: Notes are stored in Redux Persist (local storage) to retain state after reload.
--Search notes in real-time
--Sort notes (A-Z, Z-A, newly created, newly updated, Z-A)
--Responsive design
+- Create, edit, delete notes
+- Global state management using Redux Toolkit
+- Local storage persistence: Notes are stored in Redux Persist (local storage) to retain state after reload.
+- Search notes in real-time
+- Sort notes (A-Z, Z-A, newly created, newly updated, Z-A)
+- Responsive design
 
 
-###Bonus Features Implemented
--Local storage persistence
+### Bonus Features Implemented
+- Local storage persistence
 Notes are stored in Redux Persist (local storage) to retain state after reload.
--Optimized Sorting & Searching
-Search bar to filter notes by title or content.
-0ptions to sort notes alphabetically, by creation date, or by last updated date
--A confirmation dialog before deleting a note.
+- Optimized Sorting & Searching
+- Search bar to filter notes by title or content.
+- 0ptions to sort notes alphabetically, by creation date, or by last updated date
+- A confirmation dialog before deleting a note.
 

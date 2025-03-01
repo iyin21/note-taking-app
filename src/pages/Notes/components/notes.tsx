@@ -22,7 +22,7 @@ const Notes = ({
     const [confirmDeleteModal, setConfirmDeleteModal] = useState(false)
 
     return (
-        <div className="bg-[#EBEBEB] rounded-[21px] w-min-sm sm:w-72 w-full">
+        <div className="bg-[#EBEBEB] rounded-[21px] w-min-sm sm:w-72 w-full h-auto min-h-72">
             <ConfirmDeleteModal
                 openModal={confirmDeleteModal}
                 setOpenModal={setConfirmDeleteModal}
